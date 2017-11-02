@@ -10,7 +10,7 @@
   
   <title>
     
-      MONAQ
+      Tags | MONAQ
     
   </title>
   <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -112,40 +112,42 @@
 </header>
 
     <div id="article-banner">
-  <h2>Archives</h2>
-  <p class="post-date">文章归档</p>
+  <h2>Tags</h2>
+  <p class="post-date">标签检索</p>
 </div>
-<main class="app-body" id="archives">
-  
-  
-  
-    <section class="time-section">
-  <h1 class="section-year">
-    2017
-  </h1>
-  <div class="section-list">
+<main class="app-body">
+  <div id="tag-cloud">
     
-    
-      <div class="section-list-item">
-        <a href="/2017/11/02/ChromeMedia/" class="archive-title"></a>
-        <p class="archive-date">11-02</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/2017/10/27/Test-Post/" class="archive-title">Test Post</a>
-        <p class="archive-date">10-27</p>
-      </div>
+      <a class="tag2" data-name="tag-Test">Test</a>
     
   </div>
-</section>
   
+    <div class="tag-list">
+      <h3 class="tag-name" id="tag-Test">Test</h3>
+      
+        <ul class="tag-preview">
+          <li>
+            <a href="/2017/10/27/Test-Post/">Test Post</a>
+          </li>
+        </ul>
+        
+    </div>
+    
 </main>
 
 <script>
   (function () {
-    var url = 'https://monaq.github.io/archives/2017/10/index.html';
-    $('#article-banner').geopattern(url);
-    $('.header').removeClass('fixed-header');
+    var url = 'https://monaq.github.io/tags/index.html'
+    $('#article-banner').geopattern(url)
+    $('.header').removeClass('fixed-header')
+
+    var tag = location.hash.replace('#', '')
+    if (tag) {
+      var tagId = "#tag-" + tag;
+      $("html, body").animate({
+        scrollTop: $(tagId).offset().top 
+      }, 400)
+    }
   })();
 </script>
     <div class="scroll-top">
