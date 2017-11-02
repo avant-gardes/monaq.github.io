@@ -39,7 +39,7 @@
       
         <li class="list-item">
           
-            <a href="/" class="item-link active">Home</a>
+            <a href="/" class="item-link">Home</a>
           
         </li>
       
@@ -78,7 +78,7 @@
         
           <li class="menu-item">
             
-              <a href="/" class="menu-link mobile-active">Home</a>
+              <a href="/" class="menu-link">Home</a>
             
           </li>
         
@@ -111,56 +111,43 @@
   </div>
 </header>
 
-    <main class="app-body">
+    <div id="article-banner">
+  <h2>Archives</h2>
+  <p class="post-date">아카이브</p>
+</div>
+<main class="app-body" id="archives">
   
-    <article class="article-card">
-      <h2 class="article-head">
-        <a href="/2017/11/02/ChromeMedia/">Building a Modern Media Experience (Chrome Dev Summit 2017) from Chrome Media Team</a>
-      </h2>
-      <p class="article-date">November 2, 2017</p>
-      
-        
-  <a href="/tags#동영상" >
-    <span class="tag-code">동영상</span>
-  </a>
-
-      
-      <div class="article-summary">
-        
-          Chrome dev summit 2017Building a Modern Media Experience (Chrome Dev Summit 2017) from Chrome Media Team
-해당 포스트는 지난 chrome dev summit 2017 중 크롬브라우 ...
-        
+  
+  
+    <section class="time-section">
+  <h1 class="section-year">
+    2017
+  </h1>
+  <div class="section-list">
+    
+    
+      <div class="section-list-item">
+        <a href="/2017/11/02/ChromeMedia/" class="archive-title">Building a Modern Media Experience (Chrome Dev Summit 2017) from Chrome Media Team</a>
+        <p class="archive-date">11-02</p>
       </div>
-      <a class="more" href="/2017/11/02/ChromeMedia/">Read more</a>
-    </article>
-  
-    <article class="article-card">
-      <h2 class="article-head">
-        <a href="/2017/10/27/Test-Post/">Test Post</a>
-      </h2>
-      <p class="article-date">October 27, 2017</p>
-      
-        
-  <a href="/tags#Test" >
-    <span class="tag-code">Test</span>
-  </a>
-
-      
-      <div class="article-summary">
-        
-          ##HELLO WORLD
-###FIRST COMMIT
-
-        
+    
+      <div class="section-list-item">
+        <a href="/2017/10/27/Test-Post/" class="archive-title">Test Post</a>
+        <p class="archive-date">10-27</p>
       </div>
-      <a class="more" href="/2017/10/27/Test-Post/">Read more</a>
-    </article>
-  
-
+    
+  </div>
+</section>
   
 </main>
 
-
+<script>
+  (function () {
+    var url = 'https://monaq.github.io/tags/동영상/index.html';
+    $('#article-banner').geopattern(url);
+    $('.header').removeClass('fixed-header');
+  })();
+</script>
     <div class="scroll-top">
   <span class="arrow-icon"></span>
 </div>
